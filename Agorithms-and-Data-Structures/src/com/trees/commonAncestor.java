@@ -26,10 +26,7 @@ public class commonAncestor {
 			}else if(one.key > parent.key && two.key > parent.key){
 				parent = root.rightChild;
 				findCommonAncestor(parent, one, two);
-			}
-			
-			
-			
+			}		
 		}
 		
 		return parent;
