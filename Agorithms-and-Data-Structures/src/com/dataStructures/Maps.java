@@ -1,54 +1,48 @@
 package com.dataStructures;
 
 import java.util.HashMap;
-
+// create a list of 5 students with their name and positions
+// add 2 new students to the list
+// remove the students with who are in the even postions
+// display the top most student, index 1
+// remove the last student
 public class Maps {
 
-	//print item function
-	
-	public static void printHash(HashMap<Integer, String> map) {
-		for(int i : map.keySet()){
-			   System.out.println("-----------------------------------");
-			   System.out.println( i  + " ,value: " + map.get(i));
-			}
-	}
-	
-	public static void printHashNames(HashMap<String, Integer> map) {
-		for(int i : map.values()){
-			   System.out.println("-----------------------------------");
-			   System.out.println( i  + " ,value: " + map.get(i));
-			}
-	}
+// create the main class
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
- 
-		
+   
+	HashMap<Integer, String> people = new HashMap<>();
 	
-		
-		
+	// add 5 people to our list
+	people.put(1,"Ben");
+	people.put(2, "Adam");
+	people.put(3, "Rono");
+	people.put(4, "Georggy");
+	people.put(5, "Dan");
 	
-      HashMap<Integer, String> map = new HashMap<>();
-	  HashMap<String, Integer> map2 = new HashMap<>();
-	  
-	  map2.put("Hello", 1);
-	  map2.put("Hello2", 2);
-	  for(String i : map2.keySet()){
-		     System.out.println(" getting only the values " + i);
-
+	people.put(6, "Phil");
+	people.put(7, "John Doe");
+	
+	// print out the list of crushes and the people I loved dearly
+	//System.out.println(people);
+	for(Integer i : people.keySet()) {
+		if((i/2)==0) {
+			// only remove people in the even positions
+			//people.remove(i);
 		}
-		map.put(1, "John");
-		map.put(2, " Mary");
-		
-        map2.replace("Hello", 5);
-
-		printHash(map);
-		printHashNames(map2);
-			
-		map.remove(1);
-		
-		printHash(map);
-		printHashNames(map2);
-
 	}
-
+	
+	System.out.println(people);
+	
+	for(Integer i : people.keySet()) {
+		if((i%2 == 0 )) {
+			System.out.println(people.get(i));
+		}else {
+			System.out.println("Not even");
+		}
+		
+	}
+	
+		
+	}
 }
