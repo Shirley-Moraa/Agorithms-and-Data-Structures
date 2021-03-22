@@ -15,7 +15,7 @@ public class AnagramChecker {
     	 Arrays.sort(oneString);
     	 Arrays.sort(twoString);
     	// compare if the two arrays are same 
-    	 if(oneString == twoString) {
+    	 if(Arrays.equals(oneString,twoString)) {
     		 return true;
     	 }
     	
@@ -24,7 +24,7 @@ public class AnagramChecker {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
     // for two string to be anagrams, each letter has to appear as  many time 
-		String one= "hello";
+		String one= "ll";
 		String two = "ll";
 		boolean res = checkAnagram(one, two);
 		System.out.println(res);
